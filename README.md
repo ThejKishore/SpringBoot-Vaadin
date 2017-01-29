@@ -11,6 +11,6 @@ The Front end is developed using the Vaadin.
 
 Application is hosted in pivotal (using the trail period)the url below might be unavailable after few days.
 
-https://kishdemo.cfapps.io -- No Login required
+https://boot-vaadin.cfapps.io/ -- No Login required
 
 
