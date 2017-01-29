@@ -1,0 +1,5 @@
+---
+applications:
+- name: boot_vaadin
+  memory: 512M
+  path: target/springboot-vaadin-0.0.1-SNAPSHOT.jar
