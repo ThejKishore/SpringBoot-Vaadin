@@ -2,8 +2,8 @@
 
 This spring boot application is a good start point for learning Vaadin Demo application that has below modules.
 
-    1) Vaadin    : the ContactRSImpl in the com.kish.vaadin.ui.PersonUI
-    2) Spring JPA: the PersonJPA in the com.kish.vaadin.db.PersonJPA
+    1) Vaadin    : the PersonUI in the com.kish.vaadin.ui
+    2) Spring JPA: the PersonJPA in the com.kish.vaadin.db
 
 CRUD Operations are done using JPA  in inMemory H2 Database
 
