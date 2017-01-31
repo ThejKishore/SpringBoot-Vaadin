@@ -17,5 +17,5 @@ import java.util.List;
 public interface PersonJPA extends JpaRepository<Person,Long>{
 
     @Query("Select p from Person p where p.firstName LIKE %:name% OR p.lastName LIKE %:name% OR p.mailId LIKE %:name% OR p.address LIKE %:name%")
-    public List<Person> searchByName( @Param("name") String name);
+    List<Person> searchByName( @Param("name") String name);
 }

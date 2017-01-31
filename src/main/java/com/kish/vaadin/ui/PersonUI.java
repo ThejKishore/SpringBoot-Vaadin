@@ -8,6 +8,7 @@ import com.vaadin.server.FontAwesome;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.*;
+import lombok.extern.log4j.Log4j;
 
 import java.io.IOException;
 
@@ -16,6 +17,7 @@ import java.io.IOException;
  */
 @SpringUI
 @Theme("valo")
+@Log4j
 public class PersonUI extends UI {
 
     private final PersonJPA personJPA;
@@ -155,16 +157,15 @@ public class PersonUI extends UI {
         CustomLayout customLayout = null;
         try {
             customLayout = new CustomLayout(this.getClass().getResourceAsStream("/META-INF/layout.html"));
+            customLayout.addComponent(filterField,"searchTxt");
+            customLayout.addComponent(search,"searchBtn");
+            customLayout.addComponent(addPerson,"addPersonBtn");
+            customLayout.addComponent(tableHolder,"table");
+            customLayout.addComponent(form,"personEditForm");
+            setContent(customLayout);
         } catch (IOException e) {
-            e.printStackTrace();
-
+            log.error(e);
         }
-        customLayout.addComponent(filterField,"searchTxt");
-        customLayout.addComponent(search,"searchBtn");
-        customLayout.addComponent(addPerson,"addPersonBtn");
-        customLayout.addComponent(tableHolder,"table");
-        customLayout.addComponent(form,"personEditForm");
-        setContent(customLayout);
     }
 
     private void refershTable(){
