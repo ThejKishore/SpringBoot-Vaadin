@@ -5,10 +5,13 @@ package com.kish.vaadin.bo;
  */
 
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@Data
 public class  Person implements Serializable {
 
         @Id
@@ -22,7 +25,7 @@ public class  Person implements Serializable {
         private String mailId;
 
         private String address;
-
+/*
         public long getPersonId() {
                 return personId;
         }
@@ -61,7 +64,7 @@ public class  Person implements Serializable {
 
         public void setAddress(String address) {
                 this.address = address;
-        }
+        }*/
         public Person(){}
 
         public Person(String firstName, String lastName, String mailId, String address) {
